@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Vùng Nhập liệu và Dự đoán */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#customer-id {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Vùng Dự đoán */
+.prediction-box {
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    width: 250px;
+    background-color: #e9ecef;
+}
+
+.prediction-box strong {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+#return-rate {
+    font-size: 2em;
+    font-weight: bold;
+    color: #28a745; /* Mặc định xanh lá cây */
+}
+
+/* Bảng Lịch sử Mua hàng */
+.history-section h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#purchase-history {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#purchase-history th, #purchase-history td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#purchase-history th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+#purchase-history tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.back-link {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6c757d; /* Màu xám */
+    color: white;
+    text-decoration: none; /* Bỏ gạch chân link */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}

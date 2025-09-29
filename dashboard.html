@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./CSS/dashboard.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+
+    <div class="top-actions">
+        <a href="detail.html" class="action-button detail-button">
+            Customer History
+        </a>
+
+        <button class="action-button logout-button" onclick="handleLogout()">
+            Logout
+        </button>
+    </div>
+
+    <div class="filter-controls">
+        <label for="start-date">From:</label>
+        <input type="date" id="start-date" value="2024-01-01">
+        
+        <label for="end-date">To:</label>
+        <input type="date" id="end-date" value="2024-12-31">
+        
+        <button onclick="updateDashboard()">Get Dashboard</button>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="chart-container">
+            <h2>Monthly Revenue</h2>
+            <canvas id="revenueChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h2>Product Sales</h2>
+            <canvas id="salesChart"></canvas>
+        </div>
+    </div>
+</body>
+</html>

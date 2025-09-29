@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail customer history</title>
+    <link rel="stylesheet" href="./CSS/detail.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="back-link">
+            <a href="./dashboard.html" class="back-button">
+                Back
+            </a>
+        </div>
+        <h1>Chi Tiết Khách Hàng</h1>
+
+        <div class="header-section">
+            <div class="search-box">
+                <label for="customer-id">ID/Phone:</label>
+                <input type="text" id="customer-id" placeholder="VD: CUST001" value="CUST001">
+                <button id="search-button" onclick="loadCustomerData()">Details</button>
+            </div>
+
+            <div class="prediction-box">
+                <strong>Return Rate</strong>
+                <span id="return-rate">--%</span>
+                <p id="prediction-status" style="font-size: 0.9em; margin: 5px 0 0;">Loading...</p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2>History</h2>
+            <table id="purchase-history">
+                <thead>
+                    <tr>
+                        <th>Mã Đơn</th>
+                        <th>Ngày Mua</th>
+                        <th>Tổng Giá Trị</th>
+                        <th>Sản Phẩm</th>
+                    </tr>
+                </thead>
+                <tbody id="history-body">
+                    <tr><td colspan="4" style="text-align: center;">Please enter ID to view history.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
