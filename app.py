@@ -17,8 +17,9 @@ app = Flask(__name__)
 CORS(app)  # Cho phép CORS cho tất cả các route
 
 # Cấu hình Database từ biến môi trường
+# Cai nay phai tao database truoc roi moi connect duoc
 DB_CONFIG = {
-    "dbname": os.getenv("DB_NAME"),
+    "dbname": os.getenv("DB_NAME"), # CHO NAY NE THAY KHONG
     "user": os.getenv("DB_USER"),
     "password": os.getenv("DB_PASSWORD"),
     "host": os.getenv("DB_HOST"),
