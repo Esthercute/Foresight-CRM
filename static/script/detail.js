@@ -130,6 +130,8 @@ async function initializeDetailPage() {
     if (!token) return;
 
     const customerId = getCustomerIdFromUrl();
+    console.log('DEBUG: Current URL:', window.location.href);
+    console.log('DEBUG: Customer ID from URL:', customerId);
 
     // Thêm chức năng Back (Quay lại) và Logout
     document.getElementById('back-button').addEventListener('click', () => {
@@ -138,16 +140,23 @@ async function initializeDetailPage() {
     });
     document.getElementById('logout-button').addEventListener('click', handleLogout);
 
+    // If no customer ID in URL, use the default value from the input field
+    let finalCustomerId = customerId;
     if (!customerId) {
-        document.querySelector('.container').innerHTML = "<h2>Lỗi: Không tìm thấy ID khách hàng.</h2>";
-        return;
+        console.log('DEBUG: No customer ID found in URL, using default from input field');
+        finalCustomerId = document.getElementById('customer-id').value;
+        
+        // Update URL with the default customer ID
+        const url = new URL(window.location);
+        url.searchParams.set('id', finalCustomerId);
+        window.history.pushState({}, '', url);
     }
     
     // Hiển thị trạng thái tải
     document.getElementById('customer-details-section').innerHTML = '<p>Đang tải chi tiết khách hàng...</p>';
 
 
-    const data = await fetchCustomerDetails(customerId, token);
+    const data = await fetchCustomerDetails(finalCustomerId, token);
     
     if (data) {
         // Sau khi tải thành công, reset nội dung và render
