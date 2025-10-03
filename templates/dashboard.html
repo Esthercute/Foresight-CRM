@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./CSS/dashboard.css">
+    <link rel="stylesheet" href="/static/CSS/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -29,19 +29,19 @@
         <label for="end-date">To:</label>
         <input type="date" id="end-date" value="2024-12-31">
         
-        <button onclick="updateDashboard()">Get Dashboard</button>
+        <button id="update-dashboard-button">Get Dashboard</button>
     </div>
 
     <div class="dashboard-grid">
         <div class="chart-container">
             <h2>Monthly Revenue</h2>
-            <canvas id="revenueChart"></canvas>
+            <div class="chart-placeholder">Đang tải dữ liệu...</div>
         </div>
         <div class="chart-container">
             <h2>Product Sales</h2>
-            <canvas id="salesChart"></canvas>
+            <div class="chart-placeholder">Đang tải dữ liệu...</div>
         </div>
     </div>
-    <script src="./js/dashboard.js"></script>
+    <script src="/static/script/dashboard.js"></script>
 </body>
 </html>

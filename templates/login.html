@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./CSS/login.css">
+    <link rel="stylesheet" href="/static/CSS/login.css">
 </head>
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="#" onsubmit="return handleLogin(event)">
+        <form id="login-form">
             
             <div class="form-group">
                 <label for="username">User name:</label>
@@ -23,6 +23,8 @@
             
             <button type="submit" class="login-button">Login</button>
             
+            <p id="login-message" style="text-align: center; margin-top: 15px; font-size: 14px;"></p>
+            
             <p style="text-align: center; margin-top: 15px; font-size: 14px;">
                 <a href="#">Forget password?</a> | <a href="#">Register</a>
             </p>
@@ -30,6 +32,6 @@
         </form>
     </div>
 
-    <script src="./script/login.js"></script>
+    <script src="/static/script/login.js"></script>
 </body>
 </html>

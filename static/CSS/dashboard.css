@@ -36,6 +36,16 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-height: 400px;
+}
+
+.chart-placeholder {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-style: italic;
 }
 .action-button {
     padding: 10px 15px;
