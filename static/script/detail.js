@@ -13,7 +13,7 @@ function checkAuthentication() {
     const token = localStorage.getItem('userToken');
     if (!token) {
         console.warn("Không tìm thấy token. Chuyển hướng về trang đăng nhập.");
-        window.location.href = 'login.html';
+        window.location.href = '/login';
         return null;
     }
     return token;
@@ -21,7 +21,7 @@ function checkAuthentication() {
 
 function handleLogout() {
     localStorage.removeItem('userToken');
-    window.location.href = 'login.html';
+    window.location.href = '/login';
 }
 
 function loadCustomerData() {
@@ -134,7 +134,7 @@ async function initializeDetailPage() {
     // Thêm chức năng Back (Quay lại) và Logout
     document.getElementById('back-button').addEventListener('click', () => {
         // Tùy chọn: Dùng history.back() hoặc trỏ về dashboard.html
-        window.location.href = 'dashboard.html'; 
+        window.location.href = '/dashboard';
     });
     document.getElementById('logout-button').addEventListener('click', handleLogout);
 

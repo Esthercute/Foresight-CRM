@@ -9,7 +9,7 @@ function checkAuthentication() {
     if (!token) {
         // Nếu không có token, chuyển hướng về trang đăng nhập
         console.warn("Không tìm thấy token. Chuyển hướng về trang đăng nhập.");
-        window.location.href = 'login.html';
+        window.location.href = '/login';
         return false;
     }
     return token;
@@ -17,7 +17,7 @@ function checkAuthentication() {
 
 function handleLogout() {
     localStorage.removeItem('userToken');
-    window.location.href = 'login.html';
+    window.location.href = '/login';
 }
 
 // ==========================================================

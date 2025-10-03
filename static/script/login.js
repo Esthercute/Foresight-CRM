@@ -50,7 +50,7 @@ async function handleLogin(event) {
             messageElement.classList.add('text-green-500');
 
             // Chuyển hướng đến trang dashboard chính (dashboard.html hoặc index.html)
-            window.location.href = 'dashboard.html'; 
+            window.location.href = '/dashboard';
 
         } else {
             // Lỗi xác thực (ví dụ: HTTP 401)
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Kiểm tra nếu đã có token, chuyển hướng thẳng (tránh đăng nhập lại)
     if (localStorage.getItem('userToken')) {
         console.log("Đã có token, chuyển hướng đến Dashboard.");
-        window.location.href = 'dashboard.html'; 
+        window.location.href = '/dashboard';
         return;
     }
 
